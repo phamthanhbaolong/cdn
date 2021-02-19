@@ -2,9 +2,6 @@
 *   Name: Template Blogspot Startinhit App Premium Version
 *   Version: 1.1.1
 *   Last Updated: 27/05/2020
-*   Author Name: Nguyễn Tỉnh
-*   Author URI: https://admin.nguyentinhblog.com
-*   Website: https://www.nguyentinhblog.com
 -----------------------------
 -   Version 1.1.1 - 27/05/2020
 +   Fix some bugs and add post shortcodes
