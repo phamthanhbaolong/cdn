@@ -1,5 +1,5 @@
 /*!-----------------------------------------------
-*   Name: Template Blogspot Startinhit App Premium Version
+*   Name: Template Blogspot App Premium Version
 *   Version: 1.1.1
 *   Last Updated: 27/05/2020
 -----------------------------
@@ -64,8 +64,8 @@ if(data.view.isPost == "true"){
             })
         }
     }(jQuery);
-    $('#startinhitapp-main-menu').menuify();
-    $('#startinhitapp-main-menu .widget').addClass('show-menu');
+    $('#phamlongitapp-main-menu').menuify();
+    $('#phamlongitapp-main-menu .widget').addClass('show-menu');
     
     $('.show-search,.overlay-search').on('click', function() {
         $('body').toggleClass('open-search')
@@ -360,7 +360,7 @@ if(data.view.isPost == "true"){
         }
     });
     
-    $('#startinhitapp-main-menu li').each(function() {
+    $('#phamlongitapp-main-menu li').each(function() {
         var lc = $(this),
             ltx = lc.find('a'),
             am = ltx.attr('href'),
@@ -445,7 +445,7 @@ if(data.view.isPost == "true"){
         })
     });
     
-    $('.startinhitapp-widget-ready .HTML .widget-content').each(function() {
+    $('.phamlongitapp-widget-ready .HTML .widget-content').each(function() {
         var $this = $(this),
             text = $this.text().trim().toLowerCase();
         $this.shortcode({
@@ -457,7 +457,7 @@ if(data.view.isPost == "true"){
             }
         })
     });
-    $('.startinhitapp-related-content').each(function() {
+    $('.phamlongitapp-related-content').each(function() {
         var $this = $(this),
             label = $this.find('.related-tag').attr('data-label'),
             num = relatedPostsNum;
@@ -909,7 +909,7 @@ if(data.view.isPost == "true"){
         }
         $t.text($r)
     });
-    $('.startinhitapp-blog-post-comments').each(function() {
+    $('.phamlongitapp-blog-post-comments').each(function() {
         var $this = $(this),
             system = commentsSystem,
             facebook = '<div class="fb-comments" data-width="100%" data-href="' + disqus_blogger_current_url + '" order_by="time" data-numposts="5"></div>',
@@ -954,7 +954,7 @@ if(data.view.isPost == "true"){
         });
         $('#mobile-menu').each(function() {
             var $t = $(this),
-                $m = $('#startinhitapp-main-menu-nav').clone();
+                $m = $('#phamlongitapp-main-menu-nav').clone();
             $m.attr('id', 'main-mobile-nav');
             $m.find('.getMega, .mega-widget, .mega-tab').remove();
             $m.find('li.mega-tabs .complex-tabs').each(function() {
@@ -1107,7 +1107,7 @@ if(data.view.isPost == "true"){
       });
     }
     
-    $('#startinhitapp-main-menu-nav li > a').each(function() {
+    $('#phamlongitapp-main-menu-nav li > a').each(function() {
         if (data.view.isPost == 'true') {
             var x = $('#breadcrumb a.label').attr('href'),
                 y = $(this).attr('href')
@@ -1121,16 +1121,16 @@ if(data.view.isPost == "true"){
         }
         if (x === y) {
             $(this).addClass('current active');
-            $('#startinhitapp-main-menu-nav li > a').not($(this)).removeClass('current active')
+            $('#phamlongitapp-main-menu-nav li > a').not($(this)).removeClass('current active')
         }
     });
     
-    $('#startinhitapp-main-menu-nav li > a').hover(function() {
-        $('#startinhitapp-main-menu-nav li > a.active').toggleClass('current');
+    $('#phamlongitapp-main-menu-nav li > a').hover(function() {
+        $('#phamlongitapp-main-menu-nav li > a.active').toggleClass('current');
     });
     
-    if ($("#startinhitapp-main-menu-nav li > ul li > a").hasClass("current")) {
-        $("#startinhitapp-main-menu-nav li ul > li > a.current").parents("#startinhitapp-main-menu-nav > li").children("#startinhitapp-main-menu-nav > li > a").toggleClass('current active');
+    if ($("#phamlongitapp-main-menu-nav li > ul li > a").hasClass("current")) {
+        $("#phamlongitapp-main-menu-nav li ul > li > a.current").parents("#phamlongitapp-main-menu-nav > li").children("#phamlongitapp-main-menu-nav > li > a").toggleClass('current active');
     }
     
     if(data.view.isMobileRequest == "true"){
