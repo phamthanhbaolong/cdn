@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://www.phamlongit.blogspot.com/favicon.ico' rel='icon' type='image/x-icon' />
+    <title>Cdn PHAMLONG IT</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #text-effect {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            font-size: 7em;
+            line-height: normal;
+            font-weight: bold;
+            -webkit-text-stroke: 2px #fff;
+        }
+
+        #text-effect:before {
+            content: attr(data-text);
+            position: absolute;
+            background: -webkit-gradient(linear, left top, right top, from(#d630f2), color-stop(#ff002f), color-stop(#e4ff00), color-stop(#03a9f4), to(#d630f2));
+            background: -o-linear-gradient(left, #d630f2, #ff002f, #e4ff00, #03a9f4, #d630f2);
+            background: linear-gradient(90deg, #d630f2, #ff002f, #e4ff00, #03a9f4, #d630f2);
+            background-size: 300%;
+            overflow: hidden;
+            -webkit-animation: anmation 5s linear infinite;
+            animation: anmation 5s linear infinite;
+            width: 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @-webkit-keyframes anmation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 300% 0;
+            }
+        }
+
+        @keyframes anmation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 300% 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="text-effect" data-text="Cdn PHAMLONG IT">
+        CDN PHAMLONG IT
+    </h2>
+</body>
+
+</html>
