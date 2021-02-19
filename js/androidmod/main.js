@@ -2,9 +2,6 @@
 *   Name: Android Apk Mod Premium Version For Blogspot
 *   Version: 1.2.0
 *   Last Updated: 24/03/2020
-*   Author Name: Nguyễn Tỉnh
-*   Author URI: https://admin.nguyentinhblog.com
-*   Website: https://www.androidmod.net
 ----------------------------------------------- */
 /* Templateify Plugins */
 
