@@ -1,1 +1,1 @@
-www.nguyentinhblog.com
+https://phamlongit.blogspot.com/
