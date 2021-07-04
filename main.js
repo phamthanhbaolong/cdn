@@ -1,11 +1,11 @@
 
 /*!-----------------------------------------------
-*   Name: Template Blogspot Startinhit App Premium Version
+*   Name: PHẠM LONG IT
 *   Version: 1.1.1
 *   Last Updated: 27/05/2020
-*   Author Name: Nguyễn Tỉnh
-*   Author URI: https://admin.nguyentinhblog.com
-*   Website: https://www.nguyentinhblog.com
+*   Author Name: PHAMLONGIT
+*   Author URI: https://phamlongit.blogspot.com
+*   Website: https://phamlongit.blogspot.com
 -----------------------------
 -   Version 1.1.1 - 27/05/2020
 +   Fix some bugs and add post shortcodes
