@@ -96,7 +96,7 @@ if(data.view.isPost == "true"){
             $('.title-download').each(function () {
               var text = $(this),
                   html = $('table .file-name').text();
-              text.html('Tải '+ html +' cho Android')
+              text.html('Tải '+ html +' ')
             })
           });
         }
