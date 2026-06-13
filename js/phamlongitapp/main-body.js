@@ -574,7 +574,7 @@ function getPostComments(feed, i, link) {
     }
 
     // 2. Lấy Ảnh đại diện an toàn
-    var e = 'https://googleusercontent.com/profile/picture/2';
+    var e = 'https://blogger.googleusercontent.com/img/a/AVvXsEirQdsGJBwaOwk7il4e8u3vO6_ZrzQy-Bz2fB29ZcrS249WqsfLyACMuUsjzZ2nw-mjh31FFkLeF2SlWr9WZqC5z_hALVG9I6I4zospldFQ0rc4mpbuGMV87LZNz20dltZy3lFpKHjSNKyMZhTPTuq4VlxwuxutrLsENgM4J58P2FefU0N3CR34qomTqf_I';
     if (feed[i].author && feed[i].author[0] && feed[i].author[0].gd$image && feed[i].author[0].gd$image.src) {
         e = feed[i].author[0].gd$image.src.replace('/s113', '/w72-h72-p-k-no-nu');
     }
@@ -590,7 +590,7 @@ function getPostComments(feed, i, link) {
     }
 
     // Xử lý ảnh mặc định tàng hình
-    var img = (e.indexOf('blank.gif') !== -1) ? 'https://googleusercontent.com/profile/picture/2' : e;
+    var img = (e.indexOf('blank.gif') !== -1) ? 'https://blogger.googleusercontent.com/img/a/AVvXsEirQdsGJBwaOwk7il4e8u3vO6_ZrzQy-Bz2fB29ZcrS249WqsfLyACMuUsjzZ2nw-mjh31FFkLeF2SlWr9WZqC5z_hALVG9I6I4zospldFQ0rc4mpbuGMV87LZNz20dltZy3lFpKHjSNKyMZhTPTuq4VlxwuxutrLsENgM4J58P2FefU0N3CR34qomTqf_I' : e;
 
     var code = '<article class="custom-item item-' + i + '"><div class="entry-image-avatar"><a class="entry-image-link cmm-avatar" href="' + link + '"><span class="entry-thumb" data-image="' + img + '"/></a></div><h2 class="entry-title"><a href="' + link + '">' + n + '</a></h2><span class="cmm-snippet excerpt">' + h + '</span></article>';
     return code;
