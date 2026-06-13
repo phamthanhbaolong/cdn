@@ -1,7 +1,7 @@
 /*!-----------------------------------------------
 *   Name: Template Blogspot App Premium Version
 *   Version: 1.1.1
-*   Last Updated: 27/05/2020
+*   Last Updated: 06/26/2026 Fix something
 -----------------------------
 -   Version 1.1.1 - 27/05/2020
 +   Fix some bugs and add post shortcodes
