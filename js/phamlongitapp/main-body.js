@@ -567,22 +567,31 @@ if(data.view.isPost == "true"){
     }
     
 function getPostComments(feed, i, link) {
-    // 1. Kiểm tra an toàn cho Tên người dùng
-    var n = (feed[i].author && feed[i].author[0] && feed[i].author[0].name) ? feed[i].author[0].name.$t : 'Anonymous';
-    
-    // 2. Kiểm tra an toàn cho Ảnh đại diện
-    var e = (feed[i].author && feed[i].author[0] && feed[i].author[0].gd$image) ? feed[i].author[0].gd$image.src.replace('/s113', '/w72-h72-p-k-no-nu') : 'https://4.bp.blogspot.com/-oSjP8F09qxo/Wy1J9dp7b0I/AAAAAAAACF0/ggcRfLCFQ9s2SSaeL9BFSE2wyTYzQaTyQCK4BGAYYCw/w72-h72-p-k-no-nu/avatar.jpg';
-    
-    // 3. Kiểm tra an toàn cho Nội dung
-    var h = (feed[i].title && feed[i].title.$t) ? feed[i].title.$t : 'Nội dung không khả dụng.';
-
-    // Thay thế ảnh mặc định xấu bằng ảnh nét hơn
-    if (e.match('//img1.blogblog.com/img/blank.gif') || e.match('//resources.blogblog.com/img/blank.gif')) {
-        var img = 'https://4.bp.blogspot.com/-oSjP8F09qxo/Wy1J9dp7b0I/AAAAAAAACF0/ggcRfLCFQ9s2SSaeL9BFSE2wyTYzQaTyQCK4BGAYYCw/w72-h72-p-k-no-nu/avatar.jpg';
-    } else {
-        var img = e;
+    // 1. Lấy Tên người bình luận an toàn
+    var n = 'Anonymous';
+    if (feed[i].author && feed[i].author[0] && feed[i].author[0].name && feed[i].author[0].name.$t) {
+        n = feed[i].author[0].name.$t;
     }
-    
+
+    // 2. Lấy Ảnh đại diện an toàn
+    var e = 'https://googleusercontent.com/profile/picture/2';
+    if (feed[i].author && feed[i].author[0] && feed[i].author[0].gd$image && feed[i].author[0].gd$image.src) {
+        e = feed[i].author[0].gd$image.src.replace('/s113', '/w72-h72-p-k-no-nu');
+    }
+
+    // 3. Lấy Nội dung bình luận an toàn
+    var h = 'Nội dung không khả dụng.';
+    if (feed[i].title && feed[i].title.$t) {
+        h = feed[i].title.$t;
+    } else if (feed[i].summary && feed[i].summary.$t) {
+        h = feed[i].summary.$t;
+    } else if (feed[i].content && feed[i].content.$t) {
+        h = feed[i].content.$t;
+    }
+
+    // Xử lý ảnh mặc định tàng hình
+    var img = (e.indexOf('blank.gif') !== -1) ? 'https://googleusercontent.com/profile/picture/2' : e;
+
     var code = '<article class="custom-item item-' + i + '"><div class="entry-image-avatar"><a class="entry-image-link cmm-avatar" href="' + link + '"><span class="entry-thumb" data-image="' + img + '"/></a></div><h2 class="entry-title"><a href="' + link + '">' + n + '</a></h2><span class="cmm-snippet excerpt">' + h + '</span></article>';
     return code;
 }
