@@ -589,8 +589,12 @@ function getPostComments(feed, i, link) {
         h = feed[i].content.$t;
     }
 
-    // Xử lý ảnh mặc định tàng hình
-    var img = (e.indexOf('blank.gif') !== -1) ? 'https://blogger.googleusercontent.com/img/a/AVvXsEirQdsGJBwaOwk7il4e8u3vO6_ZrzQy-Bz2fB29ZcrS249WqsfLyACMuUsjzZ2nw-mjh31FFkLeF2SlWr9WZqC5z_hALVG9I6I4zospldFQ0rc4mpbuGMV87LZNz20dltZy3lFpKHjSNKyMZhTPTuq4VlxwuxutrLsENgM4J58P2FefU0N3CR34qomTqf_I' : e;
+    // 4. BỘ LỌC ẢNH (Chặn blank.gif, b16-rounded.gif, gprofile.gif)
+    var img = e;
+    if (e.indexOf('blank.gif') !== -1 || e.indexOf('b16-rounded.gif') !== -1 || e.indexOf('gprofile.gif') !== -1) {
+        // Thay bằng avatar mặc định có độ phân giải cao hơn
+        img = 'https://blogger.googleusercontent.com/img/a/AVvXsEirQdsGJBwaOwk7il4e8u3vO6_ZrzQy-Bz2fB29ZcrS249WqsfLyACMuUsjzZ2nw-mjh31FFkLeF2SlWr9WZqC5z_hALVG9I6I4zospldFQ0rc4mpbuGMV87LZNz20dltZy3lFpKHjSNKyMZhTPTuq4VlxwuxutrLsENgM4J58P2FefU0N3CR34qomTqf_I'; 
+    }
 
     var code = '<article class="custom-item item-' + i + '"><div class="entry-image-avatar"><a class="entry-image-link cmm-avatar" href="' + link + '"><span class="entry-thumb" data-image="' + img + '"/></a></div><h2 class="entry-title"><a href="' + link + '">' + n + '</a></h2><span class="cmm-snippet excerpt">' + h + '</span></article>';
     return code;
